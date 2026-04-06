@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DevOps Portfolio — CI/CD Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>DevOps Portfolio Project</h1>
+    <p class="subtitle">Deployed automatically via GitHub Actions → AWS S3</p>
+  </header>
+
+  <main>
+    <section class="pipeline-section">
+      <h2>Pipeline Architecture</h2>
+      <div class="pipeline">
+        <div class="stage">
+          <div class="stage-icon">1</div>
+          <div class="stage-label">Push to main</div>
+        </div>
+        <div class="arrow">→</div>
+        <div class="stage">
+          <div class="stage-icon">2</div>
+          <div class="stage-label">Lint &amp; Validate</div>
+        </div>
+        <div class="arrow">→</div>
+        <div class="stage">
+          <div class="stage-icon">3</div>
+          <div class="stage-label">Build</div>
+        </div>
+        <div class="arrow">→</div>
+        <div class="stage">
+          <div class="stage-icon">4</div>
+          <div class="stage-label">Deploy to S3</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stack-section">
+      <h2>Tech Stack</h2>
+      <ul class="stack-list">
+        <li><strong>CI/CD:</strong> GitHub Actions (3-job pipeline: lint → build → deploy)</li>
+        <li><strong>Hosting:</strong> AWS S3 Static Website Hosting</li>
+        <li><strong>Auth:</strong> AWS IAM — least-privilege deployment user</li>
+        <li><strong>Secrets:</strong> GitHub Encrypted Secrets (no credentials in code)</li>
+        <li><strong>Artifact:</strong> Build artifact uploaded and cached between jobs</li>
+        <li><strong>Branch protection:</strong> Pipeline must pass before merge to main</li>
+      </ul>
+    </section>
+
+    <section class="build-section">
+      <h2>Build Info</h2>
+      <table class="build-table">
+        <tr>
+          <td>Deployed at</td>
+          <td><code>BUILD_TIME_PLACEHOLDER</code></td>
+        </tr>
+        <tr>
+          <td>Commit</td>
+          <td><code>COMMIT_SHA_PLACEHOLDER</code></td>
+        </tr>
+        <tr>
+          <td>Environment</td>
+          <td><code>production</code></td>
+        </tr>
+        <tr>
+          <td>Region</td>
+          <td><code>us-east-1</code></td>
+        </tr>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>Built by a DevOps Engineer in training — 
+      <a href="https://github.com/YOUR_USERNAME/devops-project1" target="_blank">View source on GitHub</a>
+    </p>
+  </footer>
+</body>
+</html>

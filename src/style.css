@@ -1,0 +1,149 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Courier New', monospace;
+  background: #0d1117;
+  color: #c9d1d9;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+header {
+  border-bottom: 1px solid #30363d;
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 1.8rem;
+  color: #58a6ff;
+  margin-bottom: 0.4rem;
+}
+
+.subtitle {
+  color: #8b949e;
+  font-size: 0.9rem;
+}
+
+h2 {
+  font-size: 1rem;
+  color: #58a6ff;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 1.2rem;
+}
+
+section {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 1.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.pipeline {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.stage-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #1f6feb;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+.stage-label {
+  font-size: 0.75rem;
+  color: #8b949e;
+  text-align: center;
+}
+
+.arrow {
+  color: #3fb950;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.stack-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.stack-list li {
+  font-size: 0.88rem;
+  color: #c9d1d9;
+  padding-left: 1rem;
+  border-left: 2px solid #3fb950;
+}
+
+.stack-list li strong {
+  color: #e6edf3;
+}
+
+.build-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.build-table tr {
+  border-bottom: 1px solid #21262d;
+}
+
+.build-table tr:last-child {
+  border-bottom: none;
+}
+
+.build-table td {
+  padding: 0.5rem 0;
+  color: #8b949e;
+}
+
+.build-table td:first-child {
+  width: 140px;
+  color: #c9d1d9;
+}
+
+code {
+  background: #21262d;
+  border: 1px solid #30363d;
+  border-radius: 3px;
+  padding: 0.1rem 0.4rem;
+  font-size: 0.83rem;
+  color: #79c0ff;
+}
+
+footer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #30363d;
+  font-size: 0.82rem;
+  color: #8b949e;
+}
+
+footer a {
+  color: #58a6ff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}

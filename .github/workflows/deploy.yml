@@ -1,0 +1,122 @@
+name: CI/CD — Build and Deploy to AWS S3
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+env:
+  AWS_REGION: us-east-1
+  S3_BUCKET: ${{ secrets.S3_BUCKET_NAME }}
+
+jobs:
+  # ─────────────────────────────────────────
+  # JOB 1: Lint and validate
+  # ─────────────────────────────────────────
+  lint:
+    name: Lint & Validate
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Validate HTML structure
+        run: |
+          echo "Checking HTML files exist..."
+          if [ ! -f src/index.html ]; then
+            echo "ERROR: src/index.html not found"
+            exit 1
+          fi
+          echo "HTML validation passed"
+
+      - name: Check for required files
+        run: |
+          required_files=("src/index.html" "src/style.css")
+          for file in "${required_files[@]}"; do
+            if [ ! -f "$file" ]; then
+              echo "ERROR: Required file $file is missing"
+              exit 1
+            fi
+          done
+          echo "All required files present"
+
+  # ─────────────────────────────────────────
+  # JOB 2: Build
+  # ─────────────────────────────────────────
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    needs: lint
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build site (copy src to dist)
+        run: |
+          mkdir -p dist
+          cp -r src/. dist/
+          echo "Build complete. Files in dist/:"
+          ls -la dist/
+
+      - name: Inject build metadata
+        run: |
+          BUILD_TIME=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+          COMMIT_SHA="${{ github.sha }}"
+          sed -i "s|BUILD_TIME_PLACEHOLDER|${BUILD_TIME}|g" dist/index.html
+          sed -i "s|COMMIT_SHA_PLACEHOLDER|${COMMIT_SHA:0:7}|g" dist/index.html
+          echo "Injected build time: $BUILD_TIME"
+          echo "Injected commit SHA: ${COMMIT_SHA:0:7}"
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-dist
+          path: dist/
+          retention-days: 7
+
+  # ─────────────────────────────────────────
+  # JOB 3: Deploy (only on push to main)
+  # ─────────────────────────────────────────
+  deploy:
+    name: Deploy to S3
+    runs-on: ubuntu-latest
+    needs: build
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+
+    environment:
+      name: production
+      url: http://${{ secrets.S3_BUCKET_NAME }}.s3-website-us-east-1.amazonaws.com
+
+    steps:
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: site-dist
+          path: dist/
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Sync files to S3
+        run: |
+          aws s3 sync dist/ s3://${{ secrets.S3_BUCKET_NAME }}/ \
+            --delete \
+            --cache-control "max-age=86400" \
+            --exclude ".git/*"
+          echo "Deploy complete"
+
+      - name: Verify deployment
+        run: |
+          echo "Deployed files:"
+          aws s3 ls s3://${{ secrets.S3_BUCKET_NAME }}/ --recursive
+          echo ""
+          echo "Site URL: http://${{ secrets.S3_BUCKET_NAME }}.s3-website-us-east-1.amazonaws.com"
