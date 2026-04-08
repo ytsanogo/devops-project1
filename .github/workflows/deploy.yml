@@ -81,6 +81,9 @@ jobs:
     environment:
       name: production
 
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
     steps:
       - name: Download build artifact
         uses: actions/download-artifact@v4
