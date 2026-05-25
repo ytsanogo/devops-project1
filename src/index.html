@@ -8,9 +8,9 @@
 </head>
 <body>
   <header class="hero">
-    <h1>DevOps Engineer</h1>
-    <p class="subtitle">Specializing in Cloud Infrastructure, CI/CD Pipelines, and Security Engineering</p>
-    <p class="tagline">Building automated, scalable, and secure cloud solutions</p>
+    <h1>DevOps / Cloud Infrastructure Engineer</h1>
+    <p class="subtitle">AWS Architecture, Immutable Deployments, Infrastructure Automation & Production Operations</p>
+    <p class="tagline">Building scalable, observable, and resilient cloud infrastructure through infrastructure-as-code and engineering best practices</p>
   </header>
 
   <main>
@@ -19,35 +19,46 @@
       <h2>Core Competencies</h2>
       <div class="skills-grid">
         <div class="skill-card">
-          <h3>DevOps & CI/CD</h3>
+          <h3>AWS Cloud Engineering</h3>
           <ul class="skill-list">
-            <li>GitHub Actions & GitHub Workflows</li>
-            <li>Jenkins for build automation</li>
-            <li>Infrastructure as Code (Terraform, CloudFormation)</li>
-            <li>Docker & containerization</li>
-            <li>Automated Testing & Deployment Pipelines</li>
+            <li>EC2 / AMIs / Launch Templates — immutable deployments</li>
+            <li>IAM — least-privilege access policies & role design</li>
+            <li>S3 — storage architecture & data lifecycle management</li>
+            <li>VPC — network design, subnets, security groups, routing</li>
+            <li>Production-grade infrastructure design & scaling</li>
           </ul>
         </div>
 
         <div class="skill-card">
-          <h3>Cloud Infrastructure</h3>
+          <h3>Infrastructure as Code & Deployment</h3>
           <ul class="skill-list">
-            <li><strong>AWS:</strong> EC2, S3, RDS, Lambda, VPC, ECS (Expert)</li>
-            <li><strong>IBM Cloud:</strong> Basic familiarity</li>
-            <li>Network & Load Balancing Architecture</li>
-            <li>Auto-scaling & High Availability</li>
-            <li>Disaster Recovery & Backup Solutions</li>
+            <li>Terraform & CloudFormation — infrastructure automation</li>
+            <li>Packer — AMI building & image pipeline automation</li>
+            <li>Immutable infrastructure patterns & AMI-based workflows</li>
+            <li>Environment lifecycle management (dev/staging/prod)</li>
+            <li>Production migrations & blue-green deployments</li>
           </ul>
         </div>
 
         <div class="skill-card">
-          <h3>Security & Compliance</h3>
+          <h3>Linux Operations & Automation</h3>
           <ul class="skill-list">
-            <li>IAM & Access Control (Least Privilege)</li>
-            <li>Tenable Nessus vulnerability scanning</li>
-            <li>Security policy implementation</li>
-            <li>Network Security & Firewalls</li>
-            <li>Compliance & secure deployment practices</li>
+            <li>Linux production operations & troubleshooting</li>
+            <li>Bash scripting & automation</li>
+            <li>Backup & disaster recovery automation</li>
+            <li>CI/CD integration (Jenkins ecosystem, GitHub Actions)</li>
+            <li>Container foundations (Docker)</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3>Observability & Monitoring</h3>
+          <ul class="skill-list">
+            <li>Prometheus — metrics collection & alerting</li>
+            <li>Grafana — dashboards & visualization</li>
+            <li>Alertmanager — alert routing & aggregation</li>
+            <li>Blackbox exporter — endpoint monitoring & health checks</li>
+            <li>CloudWatch integration for AWS infrastructure</li>
           </ul>
         </div>
       </div>
@@ -58,27 +69,27 @@
       <h2>Featured Projects</h2>
       <div class="projects-grid">
         <div class="project-card">
-          <h3>Automated CI/CD Pipeline</h3>
-          <p>Built a 3-stage GitHub Actions pipeline: lint → build → deploy. Includes artifact caching, branch protection, and automated S3 deployment with least-privilege IAM roles.</p>
-          <span class="tech-tags">GitHub Actions • Terraform • AWS S3 • IAM</span>
+          <h3>Immutable Infrastructure & AMI-Based Deployments</h3>
+          <p>Architected and implemented immutable infrastructure patterns using Packer to build production AMIs. Designed Terraform + CloudFormation pipelines for EC2 launch templates, VPC networks, and auto-scaling groups. Zero-downtime deployments via blue-green strategies on production workloads.</p>
+          <span class="tech-tags">Packer • Terraform • CloudFormation • EC2 • IAM • Immutable Infrastructure</span>
         </div>
 
         <div class="project-card">
-          <h3>AWS Infrastructure Automation</h3>
-          <p>Designed and deployed AWS infrastructure using Terraform: VPCs, subnets, security groups, RDS databases, and load balancers. Version-controlled and automated deployment.</p>
-          <span class="tech-tags">Terraform • AWS • CloudFormation • GitOps</span>
+          <h3>Production Migration & Environment Lifecycle Management</h3>
+          <p>Led production migrations between environments, designed environment lifecycle automation (dev/staging/prod), and implemented infrastructure-as-code version control. Managed complex infrastructure transitions with zero downtime using staged rollout strategies.</p>
+          <span class="tech-tags">Terraform • CloudFormation • AWS • Blue-Green Deployment • GitOps</span>
         </div>
 
         <div class="project-card">
-          <h3>Security Audit & Vulnerability Management</h3>
-          <p>Conducted security audits using Tenable Nessus, implemented IAM policies for least-privilege access, and established secure deployment practices across infrastructure.</p>
-          <span class="tech-tags">Tenable Nessus • IAM • Security Policy • Compliance</span>
+          <h3>Observability & Monitoring Stack</h3>
+          <p>Built comprehensive monitoring infrastructure: Prometheus for metrics collection, Grafana dashboards for visualization, Alertmanager for intelligent alert routing, and Blackbox exporter for endpoint monitoring. Integrated CloudWatch for AWS resource observability.</p>
+          <span class="tech-tags">Prometheus • Grafana • Alertmanager • Blackbox • CloudWatch</span>
         </div>
 
         <div class="project-card">
-          <h3>Docker Containerization</h3>
-          <p>Containerized applications using Docker for consistent deployments across environments, enabling efficient CI/CD pipelines and simplified application management.</p>
-          <span class="tech-tags">Docker • Container Registry • Deployment Automation</span>
+          <h3>Backup & Disaster Recovery Automation</h3>
+          <p>Designed and automated backup strategies using Bash scripting and Terraform. Implemented DR workflows with automated failover, recovery testing procedures, and documented runbooks for production incident response.</p>
+          <span class="tech-tags">Bash • Terraform • AWS • Automation • DR Strategy</span>
         </div>
       </div>
     </section>
@@ -87,13 +98,13 @@
     <section class="stack-section">
       <h2>Tools & Technologies</h2>
       <ul class="stack-list">
-        <li><strong>Cloud Platforms:</strong> AWS (Expert), IBM Cloud (Basic)</li>
-        <li><strong>Containerization:</strong> Docker, Docker Compose</li>
-        <li><strong>CI/CD Tools:</strong> GitHub Actions, Jenkins</li>
-        <li><strong>Infrastructure as Code:</strong> Terraform, CloudFormation, Ansible</li>
-        <li><strong>Monitoring & Logging:</strong> CloudWatch, AWS X-Ray</li>
-        <li><strong>Programming Languages:</strong> Bash, Python, YAML</li>
-        <li><strong>Security Tools:</strong> Tenable Nessus, IAM Policies, Encryption</li>
+        <li><strong>AWS Services:</strong> EC2, AMIs, Launch Templates, IAM, S3, VPC, Security Groups</li>
+        <li><strong>Infrastructure as Code:</strong> Terraform, CloudFormation, Packer</li>
+        <li><strong>Observability:</strong> Prometheus, Grafana, Alertmanager, Blackbox Exporter, CloudWatch</li>
+        <li><strong>CI/CD:</strong> GitHub Actions, Jenkins Ecosystem</li>
+        <li><strong>Automation & Scripting:</strong> Bash, YAML, Production scripting</li>
+        <li><strong>Linux Operations:</strong> Production systems, troubleshooting, environment management</li>
+        <li><strong>Deployment Patterns:</strong> Immutable infrastructure, AMI-based workflows, blue-green deployments</li>
       </ul>
     </section>
 
