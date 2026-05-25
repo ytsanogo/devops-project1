@@ -3,76 +3,114 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Class B Website</title>
+  <title>DevOps Engineer Portfolio — Cloud Infrastructure & Security</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Class B Website</h1>
-    <p class="subtitle">A class B landing page for students, events, and learning resources</p>
+  <header class="hero">
+    <h1>DevOps Engineer</h1>
+    <p class="subtitle">Specializing in Cloud Infrastructure, CI/CD Pipelines, and Security Engineering</p>
+    <p class="tagline">Building automated, scalable, and secure cloud solutions</p>
   </header>
 
   <main>
-    <section class="pipeline-section">
-      <h2>Welcome to Class B</h2>
-      <p>Class B is a collaborative community where students share projects, learn new skills, and prepare for success.</p>
-      <div class="pipeline">
-        <div class="stage">
-          <div class="stage-icon">A</div>
-          <div class="stage-label">Class Overview</div>
+    <!-- Core Skills Section -->
+    <section class="skills-section">
+      <h2>Core Competencies</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>DevOps & CI/CD</h3>
+          <ul class="skill-list">
+            <li>GitHub Actions & GitHub Workflows</li>
+            <li>Jenkins & GitLab CI</li>
+            <li>Infrastructure as Code (Terraform, CloudFormation)</li>
+            <li>Container Orchestration (Docker, Kubernetes)</li>
+            <li>Automated Testing & Deployment Pipelines</li>
+          </ul>
         </div>
-        <div class="arrow">→</div>
-        <div class="stage">
-          <div class="stage-icon">B</div>
-          <div class="stage-label">Weekly Schedule</div>
+
+        <div class="skill-card">
+          <h3>Cloud Infrastructure</h3>
+          <ul class="skill-list">
+            <li>AWS (EC2, S3, RDS, Lambda, VPC, ECS)</li>
+            <li>Azure (VMs, App Services, AKS)</li>
+            <li>Network & Load Balancing Architecture</li>
+            <li>Auto-scaling & High Availability</li>
+            <li>Disaster Recovery & Backup Solutions</li>
+          </ul>
         </div>
-        <div class="arrow">→</div>
-        <div class="stage">
-          <div class="stage-icon">C</div>
-          <div class="stage-label">Projects</div>
-        </div>
-        <div class="arrow">→</div>
-        <div class="stage">
-          <div class="stage-icon">D</div>
-          <div class="stage-label">Resources</div>
+
+        <div class="skill-card">
+          <h3>Security & Compliance</h3>
+          <ul class="skill-list">
+            <li>IAM & Access Control (Least Privilege)</li>
+            <li>Security Scanning & Vulnerability Management</li>
+            <li>Secrets Management & Encryption</li>
+            <li>Network Security & Firewalls</li>
+            <li>Compliance (SOC2, HIPAA, GDPR)</li>
+          </ul>
         </div>
       </div>
     </section>
 
+    <!-- Featured Projects Section -->
+    <section class="projects-section">
+      <h2>Featured Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>Automated CI/CD Pipeline</h3>
+          <p>Built a 3-stage GitHub Actions pipeline: lint → build → deploy. Includes artifact caching, branch protection, and automated S3 deployment with least-privilege IAM roles.</p>
+          <span class="tech-tags">GitHub Actions • Terraform • AWS S3 • IAM</span>
+        </div>
+
+        <div class="project-card">
+          <h3>Kubernetes Cluster Management</h3>
+          <p>Designed and deployed a production-grade Kubernetes cluster with auto-scaling, monitoring, and multi-environment configuration management.</p>
+          <span class="tech-tags">Kubernetes • Docker • Helm • Prometheus</span>
+        </div>
+
+        <div class="project-card">
+          <h3>Infrastructure as Code</h3>
+          <p>Managed AWS infrastructure using Terraform: VPCs, subnets, security groups, RDS databases, and load balancers. Version-controlled and automated.</p>
+          <span class="tech-tags">Terraform • AWS • CloudFormation • GitOps</span>
+        </div>
+
+        <div class="project-card">
+          <h3>Security Audit & Hardening</h3>
+          <p>Conducted security audits, implemented secrets management, enforced encryption policies, and automated vulnerability scanning in CI/CD pipelines.</p>
+          <span class="tech-tags">Security • Scanning • Secrets Management • Compliance</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Stack Section -->
     <section class="stack-section">
-      <h2>Upcoming Events</h2>
+      <h2>Tools & Technologies</h2>
       <ul class="stack-list">
-        <li><strong>Monday:</strong> Group workshop on teamwork and communication</li>
-        <li><strong>Wednesday:</strong> Coding club meet-up and student project demos</li>
-        <li><strong>Friday:</strong> Feedback session and next steps planning</li>
+        <li><strong>Cloud Platforms:</strong> AWS, Azure, Google Cloud</li>
+        <li><strong>Container & Orchestration:</strong> Docker, Kubernetes, Docker Compose</li>
+        <li><strong>CI/CD Tools:</strong> GitHub Actions, Jenkins, GitLab CI, ArgoCD</li>
+        <li><strong>Infrastructure as Code:</strong> Terraform, CloudFormation, Ansible</li>
+        <li><strong>Monitoring & Logging:</strong> Prometheus, Grafana, ELK Stack, CloudWatch</li>
+        <li><strong>Programming Languages:</strong> Bash, Python, Go, YAML</li>
+        <li><strong>Security Tools:</strong> Vault, Snyk, OWASP ZAP, SonarQube</li>
       </ul>
     </section>
 
-    <section class="build-section">
-      <h2>Featured Class B Projects</h2>
-      <table class="build-table">
-        <tr>
-          <td>Student showcase</td>
-          <td>Interactive learning modules</td>
-        </tr>
-        <tr>
-          <td>Collaboration</td>
-          <td>Peer-led study sessions</td>
-        </tr>
-        <tr>
-          <td>Support</td>
-          <td>Mentor guidance and review</td>
-        </tr>
-        <tr>
-          <td>Growth</td>
-          <td>Skills for the next level</td>
-        </tr>
-      </table>
+    <!-- Contact Section -->
+    <section class="contact-section">
+      <h2>Get In Touch</h2>
+      <p>Interested in discussing DevOps strategies, cloud infrastructure, or security solutions? Let's connect!</p>
+      <div class="contact-links">
+        <a href="mailto:your.email@example.com" class="cta-button">Email Me</a>
+        <a href="https://github.com" target="_blank" class="cta-button">GitHub</a>
+        <a href="https://linkedin.com" target="_blank" class="cta-button">LinkedIn</a>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>Class B website created for student collaboration and learning.</p>
+    <p>&copy; 2026 DevOps Engineer Portfolio | Building secure, scalable infrastructure</p>
   </footer>
 </body>
 </html>
