@@ -118,6 +118,8 @@ Go to your repo → Settings → Secrets and variables → Actions → New repos
 | `AWS_SECRET_ACCESS_KEY` | Secret key from step 2 |
 | `S3_BUCKET_NAME` | Your bucket name |
 
+> Do not store AWS credentials or repository secrets in source files, `.env` files, or other tracked artifacts. Use GitHub Actions encrypted secrets only.
+
 ---
 
 ## Branch Protection Setup

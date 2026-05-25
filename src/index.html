@@ -3,80 +3,76 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title> DevOps Portfolio — CI/CD Demo</title>
+  <title>Class B Website</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>An Expert DevOps Portfolio Project</h1>
-    <p class="subtitle">Deployed automatically via GitHub Actions → AWS S3</p>
+    <h1>Class B Website</h1>
+    <p class="subtitle">A class B landing page for students, events, and learning resources</p>
   </header>
 
   <main>
     <section class="pipeline-section">
-      <h2>Pipeline Architecture</h2>
+      <h2>Welcome to Class B</h2>
+      <p>Class B is a collaborative community where students share projects, learn new skills, and prepare for success.</p>
       <div class="pipeline">
         <div class="stage">
-          <div class="stage-icon">1</div>
-          <div class="stage-label">Push to main</div>
+          <div class="stage-icon">A</div>
+          <div class="stage-label">Class Overview</div>
         </div>
         <div class="arrow">→</div>
         <div class="stage">
-          <div class="stage-icon">2</div>
-          <div class="stage-label">Lint &amp; Validate</div>
+          <div class="stage-icon">B</div>
+          <div class="stage-label">Weekly Schedule</div>
         </div>
         <div class="arrow">→</div>
         <div class="stage">
-          <div class="stage-icon">3</div>
-          <div class="stage-label">Build</div>
+          <div class="stage-icon">C</div>
+          <div class="stage-label">Projects</div>
         </div>
         <div class="arrow">→</div>
         <div class="stage">
-          <div class="stage-icon">4</div>
-          <div class="stage-label">Deploy to S3</div>
+          <div class="stage-icon">D</div>
+          <div class="stage-label">Resources</div>
         </div>
       </div>
     </section>
 
     <section class="stack-section">
-      <h2>Tech Stack</h2>
+      <h2>Upcoming Events</h2>
       <ul class="stack-list">
-        <li><strong>CI/CD:</strong> GitHub Actions (3-job pipeline: lint → build → deploy)</li>
-        <li><strong>Hosting:</strong> AWS S3 Static Website Hosting</li>
-        <li><strong>Auth:</strong> AWS IAM — least-privilege deployment user</li>
-        <li><strong>Secrets:</strong> GitHub Encrypted Secrets (no credentials in code)</li>
-        <li><strong>Artifact:</strong> Build artifact uploaded and cached between jobs</li>
-        <li><strong>Branch protection:</strong> Pipeline must pass before merge to main</li>
+        <li><strong>Monday:</strong> Group workshop on teamwork and communication</li>
+        <li><strong>Wednesday:</strong> Coding club meet-up and student project demos</li>
+        <li><strong>Friday:</strong> Feedback session and next steps planning</li>
       </ul>
     </section>
 
     <section class="build-section">
-      <h2>Build Info</h2>
+      <h2>Featured Class B Projects</h2>
       <table class="build-table">
         <tr>
-          <td>Deployed at</td>
-          <td><code>BUILD_TIME_PLACEHOLDER</code></td>
+          <td>Student showcase</td>
+          <td>Interactive learning modules</td>
         </tr>
         <tr>
-          <td>Commit</td>
-          <td><code>COMMIT_SHA_PLACEHOLDER</code></td>
+          <td>Collaboration</td>
+          <td>Peer-led study sessions</td>
         </tr>
         <tr>
-          <td>Environment</td>
-          <td><code>production</code></td>
+          <td>Support</td>
+          <td>Mentor guidance and review</td>
         </tr>
         <tr>
-          <td>Region</td>
-          <td><code>us-east-1</code></td>
+          <td>Growth</td>
+          <td>Skills for the next level</td>
         </tr>
       </table>
     </section>
   </main>
 
   <footer>
-    <p>Built by a DevOps Engineer in training — 
-      <a href="https://github.com/YOUR_USERNAME/devops-project1" target="_blank">View source on GitHub</a>
-    </p>
+    <p>Class B website created for student collaboration and learning.</p>
   </footer>
 </body>
 </html>

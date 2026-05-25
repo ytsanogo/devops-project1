@@ -11,6 +11,7 @@ build-config.bash
 id_rsa
 id_ed25519
 .aws/
+dist/
 
 # Secrets in common formats
 *.key

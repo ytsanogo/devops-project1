@@ -1,111 +1,132 @@
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
-  font-family: 'Courier New', monospace;
-  background: #0d1117;
-  color: #c9d1d9;
+  font-family: 'Inter', system-ui, sans-serif;
+  background: linear-gradient(180deg, #f5f7fb 0%, #eef3f9 100%);
+  color: #1f3144;
   min-height: 100vh;
   padding: 2rem;
 }
 
 header {
-  border-bottom: 1px solid #30363d;
-  padding-bottom: 1.5rem;
+  background: #ffffff;
+  border: 1px solid #d9e2ef;
+  border-radius: 18px;
+  padding: 2rem;
+  box-shadow: 0 20px 50px rgba(36, 63, 111, 0.08);
   margin-bottom: 2rem;
 }
 
 h1 {
-  font-size: 1.8rem;
-  color: #58a6ff;
-  margin-bottom: 0.4rem;
+  font-size: 2.4rem;
+  color: #1d3557;
+  margin-bottom: 0.6rem;
 }
 
 .subtitle {
-  color: #8b949e;
-  font-size: 0.9rem;
+  color: #4b6b8a;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+main {
+  display: grid;
+  gap: 1.5rem;
 }
 
 h2 {
-  font-size: 1rem;
-  color: #58a6ff;
-  text-transform: uppercase;
+  font-size: 1.1rem;
+  color: #1d3557;
   letter-spacing: 0.08em;
-  margin-bottom: 1.2rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
 }
 
 section {
-  background: #161b22;
-  border: 1px solid #30363d;
-  border-radius: 6px;
-  padding: 1.5rem;
-  margin-bottom: 1.2rem;
+  background: #ffffff;
+  border: 1px solid #dde5ef;
+  border-radius: 16px;
+  padding: 1.8rem;
 }
 
 .pipeline {
   display: flex;
-  align-items: center;
-  gap: 0.8rem;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 1rem;
   flex-wrap: wrap;
 }
 
 .stage {
+  flex: 1 1 160px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.4rem;
-}
-
-.stage-icon {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: #1f6feb;
-  color: #fff;
-  display: flex;
-  align-items: center;
   justify-content: center;
-  font-weight: bold;
-  font-size: 0.85rem;
-}
-
-.stage-label {
-  font-size: 0.75rem;
-  color: #8b949e;
+  gap: 0.8rem;
+  padding: 1rem;
+  background: #f6fbff;
+  border: 1px solid #dbe9f7;
+  border-radius: 14px;
   text-align: center;
 }
 
+.stage-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #4d8cff;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.stage-label {
+  font-size: 0.95rem;
+  color: #1f3144;
+}
+
 .arrow {
-  color: #3fb950;
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
+  align-self: center;
+  color: #7b9cd0;
+  font-size: 1.4rem;
+  margin: 0.6rem 0;
 }
 
 .stack-list {
   list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
+  display: grid;
+  gap: 0.9rem;
 }
 
 .stack-list li {
-  font-size: 0.88rem;
-  color: #c9d1d9;
-  padding-left: 1rem;
-  border-left: 2px solid #3fb950;
+  padding: 1rem 1rem 1rem 1.2rem;
+  background: #f8fbff;
+  border: 1px solid #e4ecf6;
+  border-left: 4px solid #7b9cd0;
+  border-radius: 12px;
+  color: #344a63;
 }
 
 .stack-list li strong {
-  color: #e6edf3;
+  color: #16325c;
 }
 
 .build-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.88rem;
+  font-size: 0.95rem;
 }
 
 .build-table tr {
-  border-bottom: 1px solid #21262d;
+  border-bottom: 1px solid #e4ecf6;
 }
 
 .build-table tr:last-child {
@@ -113,34 +134,27 @@ section {
 }
 
 .build-table td {
-  padding: 0.5rem 0;
-  color: #8b949e;
+  padding: 0.9rem 0;
+  color: #4b6b8a;
 }
 
 .build-table td:first-child {
-  width: 140px;
-  color: #c9d1d9;
-}
-
-code {
-  background: #21262d;
-  border: 1px solid #30363d;
-  border-radius: 3px;
-  padding: 0.1rem 0.4rem;
-  font-size: 0.83rem;
-  color: #79c0ff;
+  width: 150px;
+  color: #1f3144;
+  font-weight: 600;
 }
 
 footer {
   margin-top: 2rem;
   padding-top: 1rem;
-  border-top: 1px solid #30363d;
-  font-size: 0.82rem;
-  color: #8b949e;
+  border-top: 1px solid #d9e2ef;
+  font-size: 0.95rem;
+  color: #4b6b8a;
+  text-align: center;
 }
 
 footer a {
-  color: #58a6ff;
+  color: #4d8cff;
   text-decoration: none;
 }
 
